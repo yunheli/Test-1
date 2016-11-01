@@ -11,17 +11,17 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-//    signingConfigs {
-////        debug {
-////            storeFile file('debug.keystore')
-////        }
-//        release {
-//            keyAlias System.getenv("FLOW_ALIAS_NAME")
-//            keyPassword System.getenv("FLOW_ALIAS_PASS")
-//            storePassword System.getenv("FLOW_KEYSTORE_PASS")
-//            storeFile file(System.getenv("FLOW_CERTIFICATE_FILE"))
+    signingConfigs {
+//        debug {
+//            storeFile file('debug.keystore')
 //        }
-//    }
+        release {
+            keyAlias System.getenv("FLOW_ALIAS_NAME")
+            keyPassword System.getenv("FLOW_ALIAS_PASS")
+            storePassword System.getenv("FLOW_KEYSTORE_PASS")
+            storeFile file(System.getenv("FLOW_CERTIFICATE_FILE"))
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
