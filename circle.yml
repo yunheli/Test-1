@@ -1,3 +1,9 @@
+test:
+  post:
+    - mkdir $CIRCLE_ARTIFACTS/json_output
+    - mv test_artifacts/* $CIRCLE_ARTIFACTS/json_output
+
+
 general:
   artifacts:
     - "selenium/screenshots" # relative to the build directory
